@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css?family=Amiri');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../img/bk-img.jpeg');
+    background-size: cover;
+    background-position-y: -200px;
+    height: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    font-family: 'Amiri', serif;
+    background-color: rgba(64, 64, 64,50%);
+    height: 150px;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 38%;
+    font-size: 23px;
+}
+.nav-links li {
+    list-style: none;
+}
+.nav-links a {
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color:#80bfff;
+}
+.a-hover1:hover{
+    color: #b3cce6;
+    transition: 0.2s;
+}
+.a-hover2:hover{
+    color: #ffff00;
+    transition: 0.2s;
+}
+.a-hover3:hover{
+    color:#59b300;
+    transition: 0.2s;
+}
+
+.slide{
+    display: none;
+    cursor: pointer;
+}
+.slide div{
+    width:30px;
+    height: 2px;
+    background-color: #4080bf;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%
+    }
+}
+@media screen and (max-width:768px){
+    body{
+     overflow-x: hidden;
+     background-position-y: -130px;
+    }
+    .nav-links{
+        position:absolute;
+        right: 0px;
+        height: 92vh;
+        top: 13vh;
+        background-color: rgba(64, 64, 64,90%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .slide{
+        display: block;
+        margin-left: 10px;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform:translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+    
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(+45deg) translate(-5px, -6px);
+}
+/* section starts from here */
+section .name .sec-name{
+    color: #4d79ff;
+    font-size: 140px;
+    letter-spacing: 15px;
+    font-family: 'Amiri', serif;
+    
+}
+section .name .sec-name2{
+    color: #fff;
+    font-size: 190px;
+    letter-spacing: 15px;
+    font-family: 'Amiri', serif;
+
+}
+
+.row{
+    display: flex;
+    justify-content: flex-start; 
+    height: 73vh;
+}
+.name{
+    line-height: 105px;
+    margin-left: 7%;
+    margin-right:5%;
+    margin-top: 13%;
+}
+.context{
+    background-color:rgba(51, 51, 51,90%);
+    border-radius: 10px;
+    border-left:1px solid #fff;
+    padding: 20px;
+    margin-top: 70px;
+    height: 60vh;
+    margin-right: 70px;
+    overflow: auto;
+    box-shadow: 10px -10px #888888;
+}
+.context:hover{
+    transform: rotate(4deg);
+    transition: 0.6s;
+}
+@media screen and (max-width:750px){
+    .row{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .context{
+        margin-right: 0;
+    }
+    .con-par{
+        margin: 0;
+        padding: 0;
+    }
+    .social li a {
+        padding: 10px;
+    }
+}
+@media screen and (max-width:1300px){
+    body{
+        background-position-y: -100px;
+    }
+    .row{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .context{
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+}
+.con-par{
+    display: block;
+    color: #fff;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Playfair Display', serif;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 3.5em;
+}
+
+
+/* Footer starts from here */
+footer{
+    background-color: rgba(102,102, 102,50%);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 100px;
+}
+footer:hover {
+    background-color:rgba(115, 115, 115,50%);
+    transition: 0.3s;
+}
+.foot-par{
+    display: block;
+    color:#fff;
+    font-size: 20px;
+    position: relative;
+    top:-20px;
+}
+.social li a {
+    padding: 5px;
+}
+.social li a:hover{
+    color: #66b3ff;
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
